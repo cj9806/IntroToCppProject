@@ -21,6 +21,13 @@ int main()
 	InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
 
 	SetTargetFPS(60);
+
+	//initial game board data
+	char gameBoard[3][3] = { {'*', '*', '*'},
+							  {'*', '*', '*'},
+							  {'*', '*', '*'} };
+	bool p1Wins = false;
+	bool p2Wins = false;
 	//--------------------------------------------------------------------------------------
 
 	// Main game loop
@@ -37,7 +44,7 @@ int main()
 
 		ClearBackground(RAYWHITE);
 
-		DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+		;
 
 		EndDrawing();
 		//----------------------------------------------------------------------------------
