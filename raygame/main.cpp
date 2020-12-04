@@ -8,6 +8,7 @@ using std::cin;
 using std::endl;
 using std::string;
 
+//make board array of strings
 char gameBoard[3][3] = {
 		{' ',' ',' '},
 		{' ',' ',' '},
@@ -15,6 +16,7 @@ char gameBoard[3][3] = {
 bool turn = true;
 void drawBoard()
 { 
+	//for loop to update board
 	for (int i = 0;i < 3;i++) {
 		cout << " " << gameBoard[i][0] << " | " << gameBoard[i][1] << " | " << gameBoard[i][2] << " | "<<endl;
 		if (i < 2) {
@@ -25,6 +27,7 @@ void drawBoard()
 }
 void takeTurn() 
 {
+	//use turn boolean to swap between player 1 and player 2, number keys
 	int pos;
 	std::cout << "Enter 1-9" << std::endl;
 	std::cin >> pos;
@@ -74,6 +77,9 @@ void takeTurn()
 			gameBoard[2][2] = 'X';
 			turn = !turn;
 		}	
+		else if (pos == 0) {
+			cout << "Invalid Entry\Enter 1-9" << endl;
+		}
 		else {
 			while (std::cin.fail())
 			{
@@ -134,6 +140,7 @@ void takeTurn()
 }
 int testWin()
 {
+	//check to see winning moves
 	int win = 0;
 	if      (gameBoard[0][0] == 'X' && gameBoard[0][1] == 'X' && gameBoard[0][2] == 'X') { win = 1; }
 	else if (gameBoard[1][0] == 'X' && gameBoard[1][1] == 'X' && gameBoard[1][2] == 'X') { win = 1; }
@@ -158,8 +165,9 @@ int testWin()
 bool playing = true;
 int main()
 {	
-	
+	cout << "welcome to tic tack toen\nuse the number keys to place your piece\n 1 = top left, 2 = top middle etc." << endl;
 	while (playing) {
+		
 		drawBoard();
 		takeTurn();
 		int win = testWin();
