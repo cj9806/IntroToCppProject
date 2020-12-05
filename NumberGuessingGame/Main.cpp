@@ -81,7 +81,7 @@ int main()
 		cout << "Would you like to play again?\nY/N" << endl;
 		char choice[50];
 		cin >> choice;
-		if (choice[0] == 'Y'||'y');
+		if (choice[0] == 'Y'||choice[0] == 'y');
 		else playing = false;
 	}
 	return 0;
