@@ -93,6 +93,8 @@ int main()
 	teamCaptain[0].name = "Captain America";
 	teamCaptain[1].name = "Hawkeye";
 	teamCaptain[2].name = "Falcon";
+
+
 	teamCaptain[3].name = "Winter Soldier";
 	teamCaptain[4].name = "Ant Man";
 	teamCaptain[5].name = "Scarlet Witch";
@@ -139,21 +141,20 @@ int main()
 		//check for win
 		if (teamIronman[0].health == 0)
 		{
-			cout << "Team Captain America has won!\nPress enter to end the program" << endl;
+			cout << "Team Captain America has won!" << endl;
 			system("pause");
-			break;
+			running = false;
 		}
-		if (teamCaptain[0].health == 0)
+		else if (teamCaptain[0].health == 0)
 		{
-			cout << "Team Iron Man has won!\nPress enter to end the program" << endl;
+			cout << "Team Iron Man has won!" << endl;
 			system("pause");
-			break;
+			running = false;
 		}
 		//user input
-		
-		system("pause");
+		else system("pause");
 	}
-	//combat
+	
 	
 
 	return 0;
