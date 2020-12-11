@@ -16,12 +16,5 @@ public:
 	string name;
 	int health = 100;
 	string attackName;
-	int minAttack;
-	int maxAttack;
-
-	void Attack(Hero enemy)
-	{
-		
-	}
 };
 
