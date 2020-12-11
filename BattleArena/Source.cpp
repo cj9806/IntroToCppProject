@@ -12,9 +12,9 @@ using std::string;
 
 void sort(Hero arr[], int n)
 {
-	for (int i = 0;i < n;i++)
+	for (int i = 0;i < n-1;i++)
 	{
-		for (int j = 0; j < n - i;j++)
+		for (int j = 0; j < n - i-1;j++)
 		{
 			if (arr[j].health < arr[j + 1].health)
 			{
@@ -33,7 +33,7 @@ void attack(Hero team1[], Hero team2[])
 	{
 		//team 1attack
 		//check if hero has health left
-		if (team1[i].health > 0)
+		if (team1[i].health > 0&&team2[0].health>0)
 		{
 			//target at random till you hitone standing
 			bool targeting = true;
@@ -46,13 +46,13 @@ void attack(Hero team1[], Hero team2[])
 			int damage1 = (rand() % 20) + 1;
 			team2[target].health -= damage1;
 			cout << team1[i].name << " attacks " << team2[target].name << " with " << team1[i].attackName << " for " << damage1 << "damage!\n" << endl;
-		}
+		} //
 		else if(team1[i].health<1)
 		{
 			cout << team1[i].name << " has fallen in battle\n" << endl;
 		}
 		//team 2 attack
-		if (team2[i].health > 0)
+		if (team2[i].health > 0&&team1[0].health>0)
 		{
 			//target at random till you hit one standing
 			bool targeting = true;
@@ -118,6 +118,8 @@ int main()
 	teamCaptain[4].attackName = "a Stomp Attack";
 	teamCaptain[5].attackName = "a Telekenetic Barrage";
 
+	
+
 	cout << "Welcome to battle arena" << endl;
 	cout << endl;
 	system("pause");
@@ -131,22 +133,23 @@ int main()
 		//main combat
 		attack(teamIronman, teamCaptain);
 		//sort
-		sort(teamIronman, 5);
-		sort(teamCaptain, 5);
+		sort(teamIronman, 6);
+		sort(teamCaptain, 6);
 		
 		//check for win
 		if (teamIronman[0].health == 0)
 		{
 			cout << "Team Captain America has won!\nPress enter to end the program" << endl;
 			system("pause");
+			break;
 		}
 		if (teamCaptain[0].health == 0)
 		{
 			cout << "Team Iron Man has won!\nPress enter to end the program" << endl;
 			system("pause");
+			break;
 		}
 		//user input
-		cout << "\nPress enter to continue" << endl;
 		
 		system("pause");
 	}
