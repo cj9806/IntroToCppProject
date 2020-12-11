@@ -92,50 +92,62 @@ void takeTurn()
 		}
 	}
 	else {
-		if (pos == 1 && gameBoard[0][0])
+		if (pos == 1 && gameBoard[0][0] == ' ')
 		{
 			gameBoard[0][0] = '0';
 			turn = !turn;
 		}
-		else if (pos == 2 && gameBoard[0][1])
+		else if (pos == 2 && gameBoard[0][1] == ' ')
 		{
 			gameBoard[0][1] = '0';
 			turn = !turn;
 		}
-		else if (pos == 3 && gameBoard[0][2])
+		else if (pos == 3 && gameBoard[0][2] == ' ')
 		{
 			gameBoard[0][2] = '0';
 			turn = !turn;
 		}
-		else if (pos == 4 && gameBoard[1][0])
+		else if (pos == 4 && gameBoard[1][0] == ' ')
 		{
 			gameBoard[1][0] = '0';
 			turn = !turn;
 		}
-		else if (pos == 5 && gameBoard[1][1])
+		else if (pos == 5 && gameBoard[1][1] == ' ')
 		{
 			gameBoard[1][1] = '0';
 			turn = !turn;
 		}
-		else if (pos == 6 && gameBoard[1][2])
+		else if (pos == 6 && gameBoard[1][2] == ' ')
 		{
 			gameBoard[1][2] = '0';
 			turn = !turn;
 		}
-		else if (pos == 7 && gameBoard[2][0]) {
+		else if (pos == 7 && gameBoard[2][0] == ' ') {
 			gameBoard[2][0] = '0';
 			turn = !turn;
 		}
-		else if (pos == 8 && gameBoard[2][1]) {
+		else if (pos == 8 && gameBoard[2][1] == ' ') {
 			gameBoard[2][1] = '0';
 			turn = !turn;
 		}
-		else if (pos == 9 && gameBoard[2][2])
+		else if (pos == 9 && gameBoard[2][2] == ' ')
 		{
 			gameBoard[2][2] = '0';
 			turn = !turn;
 		}
-		
+		else if (pos == 0) {
+			cout << "Invalid Entry\Enter 1-9" << endl;
+		}
+		else {
+			while (std::cin.fail())
+			{
+				std::cout << "Invalid Entry\nEnter 1-9" << std::endl;
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				std::cin >> pos;
+				if (pos == 0) { std::cin.fail(); }
+			}
+		}
 	}
 }
 int testWin()

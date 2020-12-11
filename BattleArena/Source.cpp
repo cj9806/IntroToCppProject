@@ -14,7 +14,7 @@ void sort(Hero arr[], int n)
 {
 	for (int i = 0;i < n;i++)
 	{
-		for (int j = 0; j < n - i - 1;j++)
+		for (int j = 0; j < n - i;j++)
 		{
 			if (arr[j].health < arr[j + 1].health)
 			{
@@ -47,9 +47,9 @@ void attack(Hero team1[], Hero team2[])
 			team2[target].health -= damage1;
 			cout << team1[i].name << " attacks " << team2[target].name << " with " << team1[i].attackName << " for " << damage1 << "damage!\n" << endl;
 		}
-		if(team1[i].health<= 0)
+		else if(team1[i].health<1)
 		{
-			cout << team1[i].name << " has fallen in battle" << endl;
+			cout << team1[i].name << " has fallen in battle\n" << endl;
 		}
 		//team 2 attack
 		if (team2[i].health > 0)
@@ -66,9 +66,9 @@ void attack(Hero team1[], Hero team2[])
 			team1[target].health -= damage2;
 			cout << team2[i].name << " attacks " << team1[target].name << " with " << team2[i].attackName << " for " << damage2 << "damage!\n" << endl;
 		}
-		if(team2[i].health<=0)
+		else if(team2[i].health<1)
 		{
-			cout << team2[i].name << " has fallen in battle" << endl;
+			cout << team2[i].name << " has fallen in battle\n" << endl;
 		}
 	}
 }
@@ -120,7 +120,6 @@ int main()
 
 	cout << "Welcome to battle arena" << endl;
 	cout << endl;
-	cout << "Press enter to continue" << endl;
 	system("pause");
 
 	cout << endl;
