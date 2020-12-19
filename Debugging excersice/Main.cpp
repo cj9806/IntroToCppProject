@@ -60,6 +60,7 @@ int main()
 				{
 					cout << "The zergling target dies" << endl;
 					swarm.erase(swarm.begin());
+					swarmSize--;
 				}
 			}
 		}
@@ -69,16 +70,23 @@ int main()
 			{
 				cout << "A zergling attacks for " << i->attack() << " damage." << endl;
 				squad.begin()->takeDamage(i->attack());
-				if (squad.begin()->isAlive())
+				if ()
 				{
-
+					if (marineAlive(squad))
+					{
+						cout << "A zergling attacks for " << swarm[i].attack() << " damage." << endl;
+						int damage = swarm[i].attack();
+						squad[0].takeDamage(damage);
+						squadSize--
+					}
 				}
 				else
 					squad.erase(squad.begin());
 					cout << "The marine succumbs to his wounds." << endl;
-					
+					squadSize--;
 			}
 		}
+		system("pause");
 	}
 
 	// Once one team is completely eliminated, the fight ends and one team wins
@@ -92,14 +100,4 @@ int main()
 	}
 }
 
-// Is there a Marine Alive?
-bool marineAlive()
-{
-	return squad.size() > 0;
-}
 
-// Is there a zergling Alive
-bool zerglingAlive(vector<Zergling> swarm)
-{
-	return swarm.size();
-}

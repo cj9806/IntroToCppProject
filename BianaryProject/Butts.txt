@@ -1,0 +1,4 @@
+Name: CJ
+Age: 40
+Favorite colour: blue
+Can they do math: can't do math

@@ -1,0 +1,4 @@
+Name: CJ
+Age: 29
+Favorite colour: red
+Can they do math: can do math
