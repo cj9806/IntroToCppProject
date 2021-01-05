@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BianaryProject", "BianaryPr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BattleArena", "BattleArena\BattleArena.vcxproj", "{EDF554E0-528C-44D0-803D-985DC2652A44}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DebuggingExercise", "DebuggingExercise\DebuggingExercise.vcxproj", "{0930909E-B068-4D0B-BB34-A45AB1012716}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{EDF554E0-528C-44D0-803D-985DC2652A44}.Release|x64.Build.0 = Release|x64
 		{EDF554E0-528C-44D0-803D-985DC2652A44}.Release|x86.ActiveCfg = Release|Win32
 		{EDF554E0-528C-44D0-803D-985DC2652A44}.Release|x86.Build.0 = Release|Win32
+		{0930909E-B068-4D0B-BB34-A45AB1012716}.Debug|x64.ActiveCfg = Debug|x64
+		{0930909E-B068-4D0B-BB34-A45AB1012716}.Debug|x64.Build.0 = Debug|x64
+		{0930909E-B068-4D0B-BB34-A45AB1012716}.Debug|x86.ActiveCfg = Debug|Win32
+		{0930909E-B068-4D0B-BB34-A45AB1012716}.Debug|x86.Build.0 = Debug|Win32
+		{0930909E-B068-4D0B-BB34-A45AB1012716}.Release|x64.ActiveCfg = Release|x64
+		{0930909E-B068-4D0B-BB34-A45AB1012716}.Release|x64.Build.0 = Release|x64
+		{0930909E-B068-4D0B-BB34-A45AB1012716}.Release|x86.ActiveCfg = Release|Win32
+		{0930909E-B068-4D0B-BB34-A45AB1012716}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
